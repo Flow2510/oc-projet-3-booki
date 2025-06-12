@@ -237,6 +237,10 @@ h1{
     gap: 2rem;
 }
 
+.hebergements_container article{
+    height: 250px;         /*          ajout d'un height: 100%; pour que les articles occupe tout l'espace quand il y a un retour a la ligne      */
+}
+
 .hebergements_container img{
     width: 100%;
     aspect-ratio: 1 / 0.5;
@@ -247,8 +251,13 @@ h1{
     padding: 0.5rem;
     display: grid;
     gap: 0.4rem;
+    height: 120px;
 }
 
+.card-rating{
+    position: absolute;
+    bottom: 15px;
+}
 /****** Populaires ***********/
 .populaires {
     width: 32%;
@@ -318,6 +327,7 @@ h1{
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
     border-radius: 1rem;
     cursor: pointer;
+    height: 100%;         /*          ajout d'un height: 100%; pour que les articles occupe tout l'espace quand il y a un retour a la ligne      */
 }
 
 .activites h4{
@@ -502,7 +512,6 @@ footer a {
     .activites_container{
         grid-template-columns: repeat(1, 1fr);
         flex-direction: column;
-        grid-template-rows: repeat(auto, 150px);
     }
 
     .activites_container img{
@@ -532,6 +541,9 @@ footer a {
         padding-top: 0;
     }
 
+    .hebergements_container article{
+        height: 100%;         /*          ajout d'un height: 100%; pour que les articles occupe tout l'espace quand il y a un retour a la ligne      */
+    }
 }
 
 @media (max-width: 370px) {
