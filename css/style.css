@@ -238,7 +238,7 @@ h1{
 }
 
 .hebergements_container article{
-    height: 250px;         /*          ajout d'un height: 100%; pour que les articles occupe tout l'espace quand il y a un retour a la ligne      */
+    height: 250px;         /*          changement du height: 100% avec une valeur fixe pour mettre le card-rating en absolute bottom 0      */
 }
 
 .hebergements_container img{
@@ -404,7 +404,15 @@ footer a {
 }
 
 /* Small devices (phones, less than 768px) */
-@media (max-width: 767.98px) {
+@media (max-width: 767.98px) {    
+    
+    .main-container {
+    width: 100%;
+    max-width: 700px;
+    padding: 0;
+    }
+
+    /*  header  */
 
     header nav li::before{
         content: "";
@@ -428,6 +436,22 @@ footer a {
         width: 100%;
     }
 
+    header{
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    header nav ul li{
+        width: 100%;
+    }
+    
+    header img{
+        align-self: center;
+        margin: 1rem 0;
+    }
+
+    /*  intro section  */
+
     .intro_section{
         padding: 0 1rem;
     }
@@ -435,17 +459,9 @@ footer a {
     .intro_content{
         padding: 1rem 0;
     }
-
-    .main-container {
-    width: 100%;
-    max-width: 700px;
-    padding: 0;
-    }
-
-    header nav ul li{
-        width: 100%;
-    }
    
+    /* searchbar */
+
     .search_button_mobile i{
         background-color: transparent;
         width: fit-content;
@@ -464,6 +480,8 @@ footer a {
         display: none;
     }
 
+    /* filtres */
+
     .filters_container{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -477,10 +495,7 @@ footer a {
         grid-column: 1 / span 2;
     }
 
-    header{
-        flex-direction: column;
-        text-align: center;
-    }
+    /* hebergements & populaires */
 
     .hebergements-and-populaires{
         flex-direction: column-reverse;
@@ -490,24 +505,38 @@ footer a {
         border-radius: 0;
     }
 
+    /* hebergements */
+
     .hebergements_container{
         grid-template-columns: repeat(1, 1fr);
     }
+
+    .hebergements_container article{
+        height: 100%;         /*          ajout d'un height: 100%; pour que les articles occupe tout l'espace quand il y a un retour a la ligne      */
+    }
+    
+    .hebergements {
+        width: 100%;
+        background-color: white !important;
+    }
+
+    /* populaires */
 
     .populaires-cards{
         display: flex;
         flex-direction: column;
     }
 
-    .hebergements {
-        width: 100%;
-        background-color: white !important;
-    }
-
     .populaires {
         width: 100%;
         margin-top: 50px;
     }
+
+    .populaires-cards a {
+        width: 100%;
+    }
+
+    /* activites */
 
     .activites_container{
         grid-template-columns: repeat(1, 1fr);
@@ -517,11 +546,8 @@ footer a {
     .activites_container img{
         aspect-ratio: 2.5;
     }
-    
-    .populaires-cards a {
-        width: 100%;
-    }
 
+    /* footer */
 
     footer nav ul:nth-child(2){
         margin: 2rem 0;
@@ -530,19 +556,6 @@ footer a {
     footer nav{
         display: flex;
         flex-direction: column;
-    }
-
-    header img{
-        align-self: center;
-        margin: 1rem 0;
-    }
-
-    .intro_section{
-        padding-top: 0;
-    }
-
-    .hebergements_container article{
-        height: 100%;         /*          ajout d'un height: 100%; pour que les articles occupe tout l'espace quand il y a un retour a la ligne      */
     }
 }
 
